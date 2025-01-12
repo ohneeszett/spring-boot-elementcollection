@@ -1,0 +1,38 @@
+{
+    "name": "Java 22",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "REMOTE_USER": "ubuntu"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=${localWorkspaceFolder}/.devcontainer/data/maven/.m2,target=/home/ubuntu/.m2,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "georgewfraser.vscode-javac",
+                "redhat.vscode-xml",
+                "voidrot.liquibase",
+                "netcorext.uuid-generator"
+            ]
+        }
+    },
+    "remoteUser": "ubuntu"
+}

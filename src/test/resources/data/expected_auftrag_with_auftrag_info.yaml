@@ -1,0 +1,5 @@
+auftrag:
+    - id: bb5fdf19-7c1f-458d-88f7-2ec56da23695
+      num: A-00001
+      description: some auftrag you are
+auftrag_info_texts: []

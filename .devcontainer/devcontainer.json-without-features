@@ -1,0 +1,16 @@
+{
+    "name": "Java 22",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "REMOTE_USER": "ubuntu"
+        }
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=${localWorkspaceFolder}/.devcontainer/data/maven/.m2,target=/home/ubuntu/.m2,type=bind"
+    ],
+    "containerUser": "root",
+    "remoteUser": "ubuntu"
+}

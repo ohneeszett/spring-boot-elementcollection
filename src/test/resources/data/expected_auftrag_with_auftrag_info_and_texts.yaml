@@ -1,0 +1,11 @@
+auftrag:
+    - id: 9edf43e6-5390-465f-ada5-6eefcf1fa3fa
+      num: A-00001
+      description: some auftrag you are
+auftrag_info_texts:
+  - auftrag_id: 9edf43e6-5390-465f-ada5-6eefcf1fa3fa
+    order_idx: 0
+    text: text 1
+  - auftrag_id: 9edf43e6-5390-465f-ada5-6eefcf1fa3fa
+    order_idx: 1
+    text: text 2
